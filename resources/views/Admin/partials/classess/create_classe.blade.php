@@ -56,18 +56,20 @@
                 @include("Admin.partials.classess.create_classe_img")
             </td>
 
-            {{-- <td>
-                @include("Admin.partials.studios.show_studio_imgs")
-            </td> --}}
+            <td>
+                @include("Admin.partials.classess.show_classe_imgs")
+
+            </td>
 
             {{-- la suppression du studio --}}
-            {{-- <td>
-                @include("Admin.partials.studios.delete_studio")
+            <td>
+                @include("Admin.partials.classess.delete_classe")
+
             </td>
 
             <td>
-                @include("Admin.partials.studios.edit_studio")
-            </td> --}}
+                @include("Admin.partials.classess.edit_classe")
+            </td>
           </tr>
             @endforeach
 

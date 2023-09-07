@@ -47,3 +47,8 @@ Route::get("/admin/studio/image",[ClasseImageController::class,"index"])->name("
 //& route pour l ajout des classes
 Route::post("/admin/classe/store",[ClasseController::class,"store"])->name("indexc.store");
 Route::post("/admin/classe/image/store/{classe}",[ClasseImageController::class,"store"])->name("imagec.store");
+Route::delete('/admin/classe/image/destroy/{classeImg}',[ClasseImageController::class,"destroy"])->name("imagec.destroy");
+// * la suppression de classe
+Route::delete('/admin/classe/destroy/{classe}',[ClasseController::class,"destroy"])->name("classe.destroy");
+//* la modification du classe
+Route::put('/admin/classe/update/{classe}',[ClasseController::class,"update"])->name("classe.update");

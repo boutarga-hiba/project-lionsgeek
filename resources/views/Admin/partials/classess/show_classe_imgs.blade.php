@@ -17,11 +17,11 @@
 
 <div id="carousel{{$classe->id}}" class="carousel slide">
     <div class="carousel-inner">
-    @foreach ($classe->classeimgs as $key => $classe_img)
+    @foreach ($classe->classimgs as $key => $classimg)
         <div class="carousel-item @if ($key === 0) active @endif">
-            <img height="200" src="{{ asset("storage/Imgs/classeImgs/".$classe_img->img_url) }}" class="d-block w-100" alt="">
+            <img height="200" src="{{ asset("storage/Imgs/classImgs/".$classimg->img_url) }}" class="d-block w-100" alt="">
             <div class="carousel-caption d-none d-md-block">
-                    <form action={{route("image.destroy",$classe_img->id)}} method="POST">
+                    <form action={{route("imagec.destroy",$classimg->id)}} method="POST">
                         @csrf
                         @method("DELETE")
                         <button class="btn btn-danger" type="submit">Delete</button>

@@ -79,9 +79,6 @@
             </button>
           </div> --}}
 
-
-
-
 {{-- {{$studio->studioimgs}} --}}
         </div>
         <div class="modal-footer">

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Classe;
 use App\Models\ClassImg;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ClasseImageController extends Controller
 {
@@ -34,6 +35,11 @@ class ClasseImageController extends Controller
     }
 
 
-    
+    public function destroy(ClassImg $classeImg)
+    {
+        Storage::disk("public")->delete('Imgs/classImgs/' . $classeImg->img_url);
+        $classeImg->delete();
+        return redirect()->back();
+    }
 
 }

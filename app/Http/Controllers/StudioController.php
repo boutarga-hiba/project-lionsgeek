@@ -52,7 +52,7 @@ public function destroy(Studio $studio)
     $studioimages=StudioImg::where('studio_id', $studio->id)->get();
 
     foreach($studioimages as $studioimage ){
-        Storage::disk("public")->delete('img/' . $studioimage->img_url);
+        Storage::disk("public")->delete('Imgs/studioImgs/' . $studioimage->img_url);
     }
 
     $studio->delete();

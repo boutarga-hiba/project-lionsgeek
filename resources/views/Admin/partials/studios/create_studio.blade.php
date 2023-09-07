@@ -63,6 +63,7 @@ Ajouter studio  </button>
         {{-- la suppression du studio --}}
         <td>
             @include("Admin.partials.studios.delete_studio")
+
         </td>
 
         <td>
