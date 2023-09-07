@@ -1,0 +1,43 @@
+
+<!-- Button trigger modal -->
+{{-- @foreach($studio_images as $studio_image) --}}
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_{{$studio->id}}">
+        Ajouter une image
+    </button>
+{{-- @endforeach --}}
+
+{{-- @foreach($studio_images as $studio_image) --}}
+    <div class="modal fade" id="modal_{{$studio->id}}" tabindex="-1" aria-labelledby="modalLabel_{{$studio->id}}" aria-hidden="true">
+        <!-- Contenu du modal -->
+
+  <!-- Modal -->
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+
+
+
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action={{route("image.store" , $studio->id)}} method="POST" enctype="multipart/form-data">
+                @csrf
+
+                <div>
+                    <label for="img_url">name : </label>
+                    <input type="file" name="img_url" id="img_url">
+                </div>
+
+                
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary">Enregistrer</button>
+                </div>
+            </form>
+
+
+        </div>
+      </div>
+    </div>
+</div>
+{{-- @endforeach --}}
+  </div>
